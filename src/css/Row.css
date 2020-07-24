@@ -15,6 +15,7 @@
   display: none;
 }
 .row-poster {
+  position: relative;
   object-fit: contain;
   width: 100%;
   max-height: 150px;
@@ -27,6 +28,12 @@
   transform: scale(1.08);
 }
 
+.row-poster-title {
+  /* position: absolute; */
+  position: absolute;
+  top: 50;
+  left: 50;
+}
 .row-bigPoster {
   max-height: 250px;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./navbar.css";
+import "../css/navbar.css";
 
 function Navbar() {
   const [show, setShow] = useState(false);
@@ -21,7 +21,7 @@ function Navbar() {
       <img
         className="navbar-user"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvTJetDBH8ZI4zzlxme4aqq19cDi_RFLuE4w&usqp=CAU"
-        alt='user-logo'
+        alt="user-logo"
       />
     </div>
   );

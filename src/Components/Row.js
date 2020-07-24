@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "../axios";
-import "./Row.css";
+import "../css/Row.css";
 
 const BASE_IMAGE_URL = "https://image.tmdb.org/t/p/original/";
 
@@ -11,17 +11,17 @@ function Row({ title, fetchUrl, bigPoster }) {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
       setMovies(request.data.results);
-      console.log(fetchUrl);
       return request;
     }
     fetchData();
   }, [fetchUrl]);
   return (
     <div className="row">
-      <h2 className='row-title'>{title}</h2>
+      <h2 className="row-title">{title}</h2>
       <div className="row-posters">
-        {movies.map((movie, index) => (
+        {movies.map((movie) => (
           <img
+            key={movie.id}
             className={`row-poster ${bigPoster && "row-bigPoster"}`}
             src={`${BASE_IMAGE_URL}${
               bigPoster ? movie.poster_path : movie.backdrop_path
