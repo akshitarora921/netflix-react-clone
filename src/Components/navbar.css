@@ -1,0 +1,24 @@
+.navbar {
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+.navbar-black {
+  background-color: #111;
+
+  z-index: 1;
+}
+.navbar-logo {
+  padding-top: 10px;
+  object-fit: contain;
+  height: 40px;
+}
+.navbar-user {
+  object-fit: contain;
+  height: 60px;
+  margin-right: 20px;
+}
